@@ -5,7 +5,7 @@ resource "github_repository" "terraform-created" {
   visibility = "private"
 
   template {
-    owner = "github"
-    repository = "terraform-module-template"
+    owner = "jonico"
+    repository = "ShinyApp"
   }
 }
