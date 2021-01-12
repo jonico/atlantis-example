@@ -2,7 +2,7 @@ resource "github_repository" "terraform-created" {
   name        = "terraform-examples"
   description = "Repo created by terraform"
 
-  private = true
+  visibility = "private"
 
   template {
     owner = "github"
