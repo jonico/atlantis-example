@@ -9,7 +9,7 @@ data "github_repositories" "all_repos" {
 
 
 resource "github_team_repository" "read-it-all_team_repo" {
-  for_each = toset(data.github_repositories.all_repos[*].name)
+  for_each = toset(data.github_repositories.all_repos.names)
   team_id    = github_team.read-it-all.id
   repository = each.value
   permission = "pull"
