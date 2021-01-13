@@ -7,4 +7,4 @@ cat > index.html <<EOF
 EOF
 
 cd /opt/bitnami/projects/jekyll
-su bitnami bash -c '/opt/bitnami/ruby/bin/bundle exec jekyll serve &'
+su - bitnami 'nohup bundle exec jekyll serve &'
