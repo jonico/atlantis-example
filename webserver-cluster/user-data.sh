@@ -6,4 +6,6 @@ cat > index.html <<EOF
 <p>DB port: ${db_port}</p>
 EOF
 
-sudo -u bitnami -i 'cd /opt/bitnami/projects/jekyll && nohup bundle exec jekyll serve &'
+sudo su - bitnami
+cd /opt/bitnami/projects/jekyll
+nohup bundle exec jekyll serve &
