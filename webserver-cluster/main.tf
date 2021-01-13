@@ -39,7 +39,7 @@ data "template_file" "user_data" {
 
 resource "aws_autoscaling_group" "example" {
   launch_configuration = aws_launch_configuration.example.name
-  name = "rolling-update"-${aws_launch_configuration.example.name}
+  name = "rolling-update-${aws_launch_configuration.example.name}"
   vpc_zone_identifier  = data.aws_subnet_ids.default.ids
 
   target_group_arns = [aws_lb_target_group.asg.arn]
