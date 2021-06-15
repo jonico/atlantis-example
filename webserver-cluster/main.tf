@@ -46,7 +46,7 @@ resource "aws_autoscaling_group" "example" {
   health_check_type = "ELB"
 
   min_size = 2
-  max_size = 10
+  max_size = 5
   
   min_elb_capacity = 2
   
